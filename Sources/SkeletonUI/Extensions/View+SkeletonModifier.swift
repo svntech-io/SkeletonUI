@@ -5,4 +5,8 @@ public extension View {
     func skeleton(with loading: Bool, size: CGSize? = .none, transition: AnyTransition? = nil, animated: Animation? = nil) -> ModifiedContent<Self, SkeletonModifier> {
         modifier(SkeletonModifier(skeleton: SkeletonInteractor(loading, size: size, transition: transition, animated: animated)))
     }
+    
+    func skeletonBackground(with loading: Bool, size: CGSize? = .none, transition: AnyTransition? = nil, animated: Animation? = nil) -> ModifiedContent<Self, SkeletonBackgroundModifier> {
+        modifier(SkeletonBackgroundModifier(skeleton: SkeletonInteractor(loading, size: size, transition: transition, animated: animated)))
+    }
 }
